@@ -23,7 +23,7 @@ const validarCampos = () => {
     if(campos['cpf'].length != 11){
         msg += 'O cpf deve conter 11 dígitos. <br/>'
     }
-    if(campos['rg'].length < 8 && campos[rg].length > 11){
+    if(campos['rg'].length < 8 && campos['rg'].length > 11){
         msg += 'O rg deve conter mais de 8 digitos e menos que 11. <br/>'
     }
     if(campos['email'].length <= 5){
@@ -62,24 +62,42 @@ const validarCampos = () => {
     return msg
 }
 
-const mostrarModal = msgErro => {
-    if(msgErro == ''){
-        campos.forEach(campo => campo.value = '')
-        return true
-    }else{
+const mostrarModal = (msgErro) => {
         document.getElementById('modal_titulo').innerHTML = 'Erro no cadastro!'
         document.getElementById('modal_titulo_div').className = 'modal-header text-danger'
         document.getElementById('modal_conteudo').innerHTML = 'Verifique se todos os campos foram preenchidos corretamente: <br/>' + msgErro	
         document.getElementById('modal_btn').innerHTML = 'Voltar e corrigir'
         document.getElementById('modal_btn').className = 'btn btn-danger'
         $('#modalCadastro').modal('show')
-        return false
-    }
+        alert('modal fail')
 }
 
 function validaSubmit() {
     let msgErro = validarCampos()
-    console.log(msgErro)
-    let resultado = mostrarModal(msgErro)
-    return resultado
+    if(msgErro == ''){
+        document.getElementById('nome').value = ''
+        document.getElementById('cpf').value = ''
+        document.getElementById('rg').value = ''
+        document.getElementById('email').value = ''
+        document.getElementById('telefone').value = ''
+        document.getElementById('dataNasc').value = ''
+        document.getElementById('rua').value = ''
+        document.getElementById('numero').value = ''
+        document.getElementById('bairro').value = ''
+        document.getElementById('cidade').value = ''
+        document.getElementById('cep').value = ''
+        document.getElementById('estado').value = ''
+        document.getElementById('senha').value = ''
+        document.getElementById('confSenha').value = ''
+        return true
+    }else{
+        mostrarModal(msgErro)
+        return false
+    }
+}
+
+function cadastrar(){
+    if(validaSubmit() === true){
+        getElementById('frmCadastro').submit()
+    }
 }
