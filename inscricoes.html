@@ -21,10 +21,19 @@
             </div>
 
             <div class="col-md-10">
+                <div class="alert alert-danger mt-3" role="alert">
+                    <p>Você pode se inscrever em apenas um evento, então faça a sua escolha!</p>
+                    <p>Lembrando que pode se inscrever nos eventos que acontecem dentro do evento principal,
+                        desde que esteja disponível, para isso basta ver os sub-eventos e observar na sua descrição, pode participar ou
+                        criar uma equipe, participando em grupos!
+                    </p>
+                </div>
+
                 <div class="jumbotron jumbotron-fluid mt-5">
                     <div class="container">
-                        <h1 class="display-4">Nome do evento</h1>
-                        <p class="lead">Descrição do evento! Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique saepe, sint maxime, quibusdam fuga velit explicabo sed quos odit laudantium deserunt placeat tempore non exercitationem eaque deleniti. Magnam, consequatur?</p>
+                        <h1 id="nomeEvento" class="display-4">Nome do evento</h1>
+                        <p id="descEvento" class="lead">Descrição do evento! Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique saepe, sint maxime, quibusdam fuga velit explicabo sed quos odit laudantium deserunt placeat tempore non exercitationem eaque deleniti. Magnam, consequatur?</p>
+                        <p id="dataEvento">Data:</p>
                         <div class="dropdown">
                             <button id="botaoInsc" class="mx-auto btn btn-success">Inscrever-se</button>
                         
@@ -36,18 +45,9 @@
                                     <div class="container">
                                         <div class="card my-4">
                                             <div class="card-body">
-                                                <h4 class="card-title">Título do cartão</h4>
-                                                <h6 class="card-subtitle">Subtítulo do cartão</h6>
-                                                <p class="card-text">Descrição do subevento: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
-                                                <a class="btn btn-outline-primary" href="">Inscrever-se</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="card my-4">
-                                            <div class="card-body">
-                                                <h4 class="card-title">Título do cartão</h4>
-                                                <h6 class="card-subtitle">Subtítulo do cartão</h6>
-                                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+                                                <h4 id="nomeSubeve" class="card-title">Título do cartão</h4>
+                                                <p id="descSubeve" class="card-text">Descrição do subevento: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sapien dui, feugiat et lorem quis, fringilla maximus nisl. Vivamus sed est pulvinar, aliquet purus ut, dictum elit.</p>
+                                                <p id="dataSubeve">Data: </p>
                                                 <a class="btn btn-outline-primary" href="">Inscrever-se</a>
                                             </div>
                                         </div>
